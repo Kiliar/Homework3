@@ -1,0 +1,549 @@
+/*
+Theme Name: GeekHub
+Theme URI: http://geekhub.ck.ua/
+Author: Yaroslav_Malevany
+Description: GeekHub clone
+Text Domain: GeekHub
+*/
+
+
+/*-----------------------------------------------------------------------------------*/
+/*---------------------------------------RESET---------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+/* 
+  Tripoli is a generic CSS standard for HTML rendering.  
+  Copyright (C) 2007 David Hellsing 
+
+  This program is free software: you can redistribute it and/or modify 
+  it under the terms of the GNU General Public License as published by 
+  the Free Software Foundation, either version 3 of the License, or 
+  (at your option) any later version. 
+
+  This program is distributed in the hope that it will be useful, 
+  but WITHOUT ANY WARRANTY; without even the implied warranty of 
+  MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the 
+  GNU General Public License for more details. 
+
+  You should have received a copy of the GNU General Public License 
+  along with this program. If not, see <http://www.gnu.org/licenses/>. 
+*/ 
+
+* { 
+  text-decoration: none; 
+  font-size: 1em; 
+  outline: none; 
+  padding: 0; 
+  margin: 0; 
+  } 
+code, kbd, samp, pre, tt, var, textarea,  
+input, select, isindex, listing, xmp, plaintext { 
+  white-space: normal; 
+  font-size: 1em; 
+  font: inherit; 
+  } 
+dfn, i, cite, var, address, em {  
+  font-style: normal;  
+  } 
+th, b, strong, h1, h2, h3, h4, h5, h6 {  
+  font-weight: normal;  
+  } 
+a, img, a img, iframe, form, fieldset,  
+abbr, acronym, object, applet, table { 
+  border: none;  
+  } 
+table { 
+  border-collapse: collapse; 
+  border-spacing: 0; 
+  } 
+caption, th, td, center {  
+  vertical-align: top; 
+  text-align: left; 
+  } 
+body {  
+  background: white;  
+  line-height: 1;  
+  color: black;  
+  } 
+q {  
+  quotes: "" "";  
+  } 
+ul, ol, dir, menu {  
+  list-style: none;  
+  } 
+sub, sup {  
+  vertical-align: baseline;  
+  } 
+a {  
+  color: inherit;  
+  } 
+hr {  
+  display: none;  
+  } 
+font {  
+  color: inherit !important;  
+  font: inherit !important;  
+  color: inherit !important; /* editor's note: necessary? */  
+  } 
+marquee { 
+  overflow: inherit !important; 
+  -moz-binding: none; 
+  } 
+blink {  
+  text-decoration: none;  
+  } 
+nobr {  
+  white-space: normal;  
+  } 
+
+  .hide {
+  	text-indent: -9999px;
+  	font-size: 1em;
+      display: inline-block;
+  }
+/*-----------------------------------------------------------------------------------*/
+/*---------------------------------------HEADER--------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+header {
+  background:url("./img/header_bg.png") repeat-x bottom center #fff;
+}
+.header {
+  width: 901px;
+  margin: 0 auto;
+}
+.header nav {
+  height: 100px;
+  border-bottom: 1px solid #8ea8b3;
+  height: 107px;
+}
+.header h1 {
+  width:  167px;
+  height: 71px;
+  background: url("./img/geekhub_logo.png") no-repeat;
+  display: inline-block;
+  margin: 19px 0 0 0;
+}
+.header h1 a {
+  width:  167px;
+  overflow: hidden;
+}
+.header .menu-header {
+margin: 36px 29px 0px 0;
+  float: right;
+  height: 42px;
+}
+.header .menu-header li {
+  display: inline-block;
+  margin: 0 0px 0 10px
+}
+.header .menu-header li a{
+  display: inline-block;
+  font-weight: bold;
+font-family: "Trebuchet MS";
+font-size: 14px;
+color: #396375;
+text-transform: uppercase;
+padding: 14px 6px;
+}
+.header .menu-header li a:hover, .header .menu-header li a.active {
+  color: #E11D5D;
+}
+.header .menu-header li a.active {
+  position: relative;
+}
+.header .menu-header li a.active:before {
+  position: absolute;
+  content: " ";
+  height: 13px;
+  width: 55px;
+  background: url('./img/inner_active.png') 0 0 no-repeat;
+  top: 60px;
+  left: 24%;
+}
+.header .menu-header li a.home:before{
+display: none;
+}
+.header .social-links {
+  float: right;
+  height: 42px;
+  margin: 35px 2px 0 0;
+}
+.header .social-links li {
+  display: inline-block;
+}
+.header .social-links li a {
+  padding: 2px;
+  background: url("./img/icons_social.png") no-repeat;
+  opacity: 0.8;
+  width: 24px;
+  height: 42px;
+}
+.header .social-links li a:hover {
+  opacity: 1;
+}
+.header .social-links li.facebook a {
+  background-position: 0 10px;
+}
+.header .social-links li.vk a {
+  background-position: -32px 10px;
+}
+.header .social-links li.twitter a {
+    background-position: -64px 10px;
+}
+.header .social-links li.youtube a {
+    background-position: -96px 10px;
+}
+.header .information {
+  text-align: center;
+  color: #246685;
+background: url(./img/splash.png) 79% -49% no-repeat;
+height: 342px;
+}
+.header .information strong {
+padding: 75px 0 29px;
+font-family: "Trebuchet MS";
+font-weight: normal;
+font-size: 45px;
+line-height: 62px;
+color: #246685;
+text-align: center;
+display: block;
+}
+.header .information span {
+display: block;
+padding: 0 0 27px;
+font-family: "Trebuchet MS";
+font-weight: normal;
+font-size: 25px;
+color: #246685;
+text-align: center;
+}
+.header .information fieldset {
+  margin: 0 auto;
+  width: 460px;
+}
+.header .information form input[type="email"] {
+display: block;
+float: left;
+width: 217px;
+height: 46px;
+margin: 0 10px 0 0;
+font-family: "Trebuchet MS";
+font-weight: normal;
+font-size: 18px;
+text-align: center;
+background-color: white;
+border: 1px solid #a9a9a9;
+border-radius: 3px;
+color: #4c7689;
+vertical-align: middle;
+}
+.header .information form input[type="email"]:focus{
+  border-color: #E11D5D
+}
+.header .information form input[type="submit"] {
+  display: block;
+float: left;
+width: 217px;
+height: 46px;
+border: 0;
+outline: 0;
+background: url("http://geekhub.ck.ua/images/register_submit.png") center bottom no-repeat;
+color: #fff;
+text-align: center;
+font-family: "Trebuchet MS";
+font-weight: normal;
+font-size: 18px;
+}
+/*-----------------------------------------------------------------------------------*/
+/*--------------------------------------CONTENT--------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+.content {
+  width: 901px;
+  margin: 0 auto;
+   padding:28px 0 40px; 
+}
+.content h2 {
+  text-align: center;
+  font:14px "Trebuchet MS" ;
+line-height: 18px;
+color: #4C7687;
+text-transform: uppercase;
+letter-spacing: 4px;
+padding: 0 0 8px;
+}
+.content .courses li {
+  display: inline-block;
+  width: 295px;
+  padding: 24px 0px 24px 0;
+  border-top: 1px solid #D2DCE1;
+  float: left;
+}
+.content .courses li:nth-child(3n+1) {
+  clear: both;
+}
+.content .courses li img {
+  float: left;
+display: inline-block;
+width: 100px;
+height: 100px;
+margin: 0 16px 0 0;
+}
+.content .courses li strong {
+font: 27px "Trebuchet MS";
+color: #EA2778;
+line-height: 27px;
+display: block;
+margin: 12px 0 12px 0;
+}
+ .content .courses li p {
+overflow: hidden;
+font: 13px arial;
+line-height: 18px;
+color: #39525A;
+}
+ .content .courses li a {
+  display: block;
+margin: 9px 0 0 0;
+text-decoration: underline;
+color: #EA2678;
+float: right;
+margin: 0 10px 0 0;
+ }
+
+
+.content-page {
+
+  width: 901px;
+  margin: 0 auto;
+   padding:28px 0 40px; 
+}
+.content-page h2 {
+  font-family: "Trebuchet MS";
+font-weight: normal;
+font-size: 50px;
+line-height: 50px;
+padding: 0 0 8px;
+margin: 0 0 27px;
+border-bottom: 1px solid #a7c3cf;
+color: #4c7689;
+}
+.content-page img {
+  float: left;
+  padding-bottom: 600px;
+  margin: 0 28px 0 0
+}
+.content-page p {
+margin: 0 0 10px;
+color: #4c7689;
+  font-family: Arial;
+font-size: 14px;
+line-height: 20px;
+}
+.content-page p a {
+  font-weight: bold;
+  color: #E11D5D;
+
+}
+
+/*-----------------------------------------------------------------------------------*/
+/*---------------------------------------FOOTER--------------------------------------*/
+/*-----------------------------------------------------------------------------------*/
+footer {
+	width: 901px;
+	margin: 0 auto;
+      clear: both;
+}
+#vk {
+  display: inline-block;
+  float: left;
+  margin:  0 10px 0 0;
+}
+footer .sertificates_list {
+  display: inline-block;
+  width: 276px;
+  height: 214px;
+  background: url("./img/banner.png") no-repeat;
+  float: left;
+}
+footer .sertificates_list a{
+  display: block;
+  width: 276px;
+  height: 214px;
+}
+footer .sponsors {
+  width: 276px;
+  display: inline-block;
+  overflow: hidden;
+  float: left;
+  margin: 0 0 0 10px;
+}
+footer .sponsors strong {
+  text-align: center;
+font: 14px "Trebuchet MS";
+line-height: 14px;
+text-transform: uppercase;
+letter-spacing: 6px;
+padding: 0 0 8px;
+margin: 0 0 22px;
+color: #4c7689;
+display: block;
+}
+footer .sponsors .sponsors-list {
+  border-top: 1px solid #a7c3cf;
+
+}
+footer .sponsors .sponsors-list li {
+  float: left;
+  padding: 0 12px 14px;
+}
+
+footer .sponsors .sponsors-list li a {
+  display: block;
+  text-indent: -200px;
+  overflow: hidden;
+  background: url("./img/sponsors.png") no-repeat;
+}
+footer .sponsors .sponsors-list li.de a:hover {
+    background-position: 0 0;
+}
+
+footer .sponsors .sponsors-list li.de a {
+    width:70px;
+    height:54px;
+    background-position: 0 -76px;
+}
+
+footer .sponsors .sponsors-list li.moc a:hover {
+    background-position: -101px 0px;
+}
+
+footer .sponsors .sponsors-list li.moc a {
+    width:72px;
+    height:46px;
+    background-position: -101px -76px;
+}
+
+footer .sponsors .sponsors-list li.sergium a:hover {
+    background-position: -209px 0px;
+}
+
+footer .sponsors .sponsors-list li.sergium a {
+    width:45px;
+    height:48px;
+    background-position: -209px -76px;
+}
+
+footer .sponsors .sponsors-list li.stuff a:hover {
+    background-position: -283px 0px;
+}
+
+footer .sponsors .sponsors-list li.stuff a {
+    width:59px;
+    height:49px;
+    background-position: -283px -76px;
+}
+
+footer .sponsors .sponsors-list li.youthog a:hover {
+    background-position: -385px 0;
+}
+
+footer .sponsors .sponsors-list li.youthog a {
+    width:61px;
+    height:44px;
+    background-position: -385px -76px;
+}
+footer .sponsors .sponsors-list li.jetbrains {
+    margin: 0 0 0 27px;
+}
+footer .sponsors .sponsors-list li.jetbrains a:hover {
+    background-position: -472px -2px;
+}
+
+footer .sponsors .sponsors-list li.jetbrains a {
+    width:107px;
+    height:40px;
+    background-position: -472px -76px;
+}
+footer .sponsors .sponsors-list li.ucoz a:hover {
+    background-position: -944px 0px;
+}
+
+footer .sponsors .sponsors-list li.ucoz a {
+    width:58px;
+    height:49px;
+    background-position: -944px -76px;
+}
+footer .sponsors .sponsors-list li.spd-ukraine {
+    float: none;
+    clear: both;
+    margin: 0 0 0 54px;
+}
+footer .sponsors .sponsors-list li.spd-ukraine a:hover {
+    background-position: -611px -9px;
+}
+
+footer .sponsors .sponsors-list li.spd-ukraine a {
+    width:140px;
+    height:25px;
+    background-position: -611px -76px;
+}
+footer .sponsors .sponsors-list li.ekreative {
+    float: none;
+    clear: both;
+    margin: 0 0 0 56px;
+}
+footer .sponsors .sponsors-list li.ekreative a:hover {
+    background-position: -781px -5px;
+}
+
+footer .sponsors .sponsors-list li.ekreative a {
+    width:129px;
+    height:34px;
+    background-position: -781px -75px;
+}
+footer .sponsors .sponsors-list li.n3wnormal {
+    float: none;
+    clear: both;
+    margin: 0 0 0 52px;
+}
+footer .sponsors .sponsors-list li.n3wnormal a:hover {
+    background-position: -1034px -6px;
+}
+
+footer .sponsors .sponsors-list li.n3wnormal a {
+    width:140px;
+    height:39px;
+    background-position: -1034px -76px;
+}
+footer .sponsors .sponsors-list li.in-ck-ua {
+    float: none;
+    clear: both;
+    margin: 0 0 0 52px;
+}
+footer .sponsors .sponsors-list li.in-ck-ua a:hover {
+    background-position: -1216px -7px;
+}
+
+footer .sponsors .sponsors-list li.in-ck-ua a {
+    width:139px;
+    height:32px;
+    background-position: -1216px -76px;
+}
+footer .footer-nav {
+  clear: both;
+  border-top: 1px solid #a7c3cf;
+}
+footer .footer-nav li {
+  display: inline-block;
+  margin: 0 0px 0 10px
+}
+footer .footer-nav li  a  {
+display: inline-block;
+height: 12px;
+font-size: 10px;
+font-weight: bold;
+font-family: "Trebuchet MS";
+color: #396375;
+text-transform: uppercase;
+padding: 13px 0 0 0;
+}
