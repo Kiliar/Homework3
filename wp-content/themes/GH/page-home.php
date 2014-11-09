@@ -12,7 +12,7 @@
         $(function(){
         	$('.courses li').click(function(){
                 var index = $(this).index();
-                window.location = '<?php bloginfo("template_directory"); ?>/details.html?'+index;
+                window.location = '<?php bloginfo(url) ?>/category/courses?'+index;
                 return false;
             });
         });
@@ -38,14 +38,10 @@
 			</ul>
 		</nav>
 		<div class="information">
-			<strong>Реєстрацію на 4й сезон закрито</strong>
-			<span>*залиште нам ваш емейл і ми повідомимо вас про початок реєстрації</span>
-			<form action="#">
-            			<fieldset>
-                   			<input type="email"  placeholder="Ваш email" />
-                			<input type="submit" value="Відіслати" />
-           	 		</fieldset>
-        			</form>
+			<?php 
+			$page = get_page_by_title( 'home' );
+			echo $page->post_content;
+			 ?>
 		</div>
 	</div>
 	</header>

@@ -63,6 +63,9 @@ body {
   background: white;  
   line-height: 1;  
   color: black;  
+  font-size: 12px;
+font-family: Arial, sans-serif;
+color: #4c7689;
   } 
 q {  
   quotes: "" "";  
@@ -332,6 +335,9 @@ color: #4c7689;
   padding-bottom: 600px;
   margin: 0 28px 0 0
 }
+.content-page .team img {
+  padding-bottom: 0;
+} 
 .content-page p {
 margin: 0 0 10px;
 color: #4c7689;
@@ -344,7 +350,6 @@ line-height: 20px;
   color: #E11D5D;
 
 }
-
 /*-----------------------------------------------------------------------------------*/
 /*---------------------------------------FOOTER--------------------------------------*/
 /*-----------------------------------------------------------------------------------*/
