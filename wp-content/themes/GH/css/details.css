@@ -1219,7 +1219,7 @@ text-indent:-999em;
 }
 
 #content .register .processing .buttons {
-    background: url('./images/registration-form-loader.gif') 260px 46px no-repeat;
+    background: url('.../images/registration-form-loader.gif') 260px 46px no-repeat;
 }
 
 .register fieldset.registration-wrap ul.registration-form li input[type="submit"] {
